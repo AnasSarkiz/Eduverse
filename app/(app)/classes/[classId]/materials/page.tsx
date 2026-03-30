@@ -12,12 +12,9 @@ import {
   Video,
   Link as LinkIcon,
   Code2,
-  PresentationIcon,
   Download,
   Search,
   PlusCircle,
-  Filter,
-  Presentation,
   Layers,
 } from "lucide-react";
 import { cn } from "@/lib/utils";

@@ -19,6 +19,8 @@ import {
   Video,
   Code2,
   Shield,
+  ClipboardList,
+  Terminal,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useApp } from "@/lib/store";
@@ -52,6 +54,8 @@ const CLASS_NAV_ITEMS = [
   { label: "Materials", icon: FileText, segment: "materials" },
   { label: "Assignments", icon: FlaskConical, segment: "assignments" },
   { label: "Session", icon: Video, segment: "session" },
+  { label: "Exam", icon: ClipboardList, segment: "exam" },
+  { label: "IDE", icon: Terminal, segment: "ide" },
   { label: "Leaderboard", icon: Trophy, segment: "leaderboard" },
 ];
 

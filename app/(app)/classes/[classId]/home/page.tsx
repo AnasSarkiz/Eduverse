@@ -8,7 +8,6 @@ import {
   getStudentsInClass,
   getAssignmentsByClass,
   getMaterialsByClass,
-  CLASS_BG_MAP,
 } from "@/lib/mock-data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -189,7 +188,7 @@ export default function ClassHomePage({
                     <statusCfg.icon className={cn("w-4 h-4 shrink-0", statusCfg.class)} />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-foreground truncate">{a.title}</p>
-                      <p className="text-xs text-muted-foreground">
+                      <p className="text-xs text-muted-foreground" suppressHydrationWarning>
                         Due {format(new Date(a.dueDate), "MMM d")}
                       </p>
                     </div>

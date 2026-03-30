@@ -48,7 +48,7 @@ function MessageBubble({
             <Badge variant="secondary" className="text-[10px] bg-primary/10 text-primary border-0 py-0">
               Announcement
             </Badge>
-            <span className="text-[10px] text-muted-foreground ml-auto">
+            <span className="text-[10px] text-muted-foreground ml-auto" suppressHydrationWarning>
               {format(new Date(msg.timestamp), "MMM d, h:mm a")}
             </span>
           </div>
@@ -91,7 +91,7 @@ function MessageBubble({
               </p>
             </div>
           </div>
-          <p className="text-[10px] text-muted-foreground mt-1 px-1">
+          <p className="text-[10px] text-muted-foreground mt-1 px-1" suppressHydrationWarning>
             {format(new Date(msg.timestamp), "h:mm a")}
           </p>
         </div>
@@ -122,7 +122,7 @@ function MessageBubble({
         >
           {msg.content}
         </div>
-        <p className="text-[10px] text-muted-foreground mt-1 px-1">
+        <p className="text-[10px] text-muted-foreground mt-1 px-1" suppressHydrationWarning>
           {format(new Date(msg.timestamp), "h:mm a")}
         </p>
       </div>
