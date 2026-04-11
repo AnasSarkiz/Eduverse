@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "EduFlow — Learning Management System",
+  title: "Eduverce — Learning Management System",
   description:
     "A modern LMS for schools, bootcamps, and private institutions. Featuring live sessions, class chat, exams, an IDE, and student dashboards.",
   generator: "v0.app",

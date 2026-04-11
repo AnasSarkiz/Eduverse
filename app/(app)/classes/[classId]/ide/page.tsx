@@ -50,7 +50,7 @@ const LANGUAGES: Language[] = [
     id: "python",
     label: "Python 3",
     monacoId: "python",
-    defaultCode: `# Python 3 - EduFlow IDE
+    defaultCode: `# Python 3 - Eduverce IDE
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     id: "javascript",
     label: "JavaScript",
     monacoId: "javascript",
-    defaultCode: `// JavaScript - EduFlow IDE
+    defaultCode: `// JavaScript - Eduverce IDE
 
 function greet(name) {
   return \`Hello, \${name}!\`;
@@ -88,7 +88,7 @@ console.log("Doubled:", doubled);
     id: "typescript",
     label: "TypeScript",
     monacoId: "typescript",
-    defaultCode: `// TypeScript - EduFlow IDE
+    defaultCode: `// TypeScript - Eduverce IDE
 
 interface Greeting {
   message: string;
@@ -111,7 +111,7 @@ console.log("Time:", result.timestamp.toISOString());
     id: "java",
     label: "Java",
     monacoId: "java",
-    defaultCode: `// Java - EduFlow IDE
+    defaultCode: `// Java - Eduverce IDE
 public class Main {
     public static String greet(String name) {
         return "Hello, " + name + "!";
@@ -136,7 +136,7 @@ public class Main {
     id: "cpp",
     label: "C++",
     monacoId: "cpp",
-    defaultCode: `// C++ - EduFlow IDE
+    defaultCode: `// C++ - Eduverce IDE
 #include <iostream>
 #include <vector>
 #include <string>

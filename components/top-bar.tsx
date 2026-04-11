@@ -1,6 +1,15 @@
 "use client"
 
-import { Bell, Moon, Sun, Search, ChevronDown } from "lucide-react"
+import Link from "next/link"
+import {
+  Bell,
+  Moon,
+  Sun,
+  Search,
+  ChevronDown,
+  GraduationCap,
+  User,
+} from "lucide-react"
 import { useApp } from "@/lib/store"
 import { USERS } from "@/lib/mock-data"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
@@ -13,7 +22,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 
 const ROLE_COLOR: Record<string, string> = {
@@ -28,8 +36,18 @@ export function TopBar() {
 
   return (
     <header className="h-14 border-b border-border flex items-center px-4 gap-3 bg-card/80 backdrop-blur-sm">
+      <Link
+        href="/dashboard"
+        className="flex items-center gap-2 shrink-0 rounded-lg px-2 py-1.5 hover:bg-accent transition-colors"
+      >
+        <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-primary shrink-0">
+          <GraduationCap className="w-3.5 h-3.5 text-primary-foreground" />
+        </div>
+        <span className="font-semibold text-sm text-foreground">Eduverce</span>
+      </Link>
+
       {/* Search */}
-      <div className="relative flex-1 max-w-sm hidden md:block">
+      <div className="relative flex-1 max-w-md hidden md:block">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" />
         <input
           type="search"
@@ -73,9 +91,18 @@ export function TopBar() {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-64">
             <DropdownMenuLabel className="text-xs text-muted-foreground font-normal">
+              My Account
+            </DropdownMenuLabel>
+            <DropdownMenuItem asChild>
+              <Link href="/profile" className="flex items-center gap-2 py-2">
+                <User className="w-4 h-4" />
+                <span>Profile</span>
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuLabel className="text-xs text-muted-foreground font-normal">
               Switch demo user
             </DropdownMenuLabel>
-            <DropdownMenuSeparator />
             {USERS.map((user) => (
               <DropdownMenuItem
                 key={user.id}

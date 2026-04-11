@@ -128,7 +128,7 @@ export function Sidebar({ collapsed, setCollapsed }: SidebarProps) {
             </div>
             {!collapsed && (
               <span className="font-semibold text-sidebar-foreground text-sm truncate">
-                EduFlow
+                Eduverce
               </span>
             )}
           </Link>
